@@ -28,7 +28,11 @@ public class StupidController
 		
 		System.out.println("My next question is this: What is the best type of food?");
 		String foodInput = inputReader.next();
-		System.out.println("Ok, you typed this: " + foodInput);
+		if(foodInput.equals(""))
+		{
+			System.out.println("Ok, you typed this: " + foodInput);
+			
+		}
 		inputReader.nextLine();
 		
 		System.out.println("How many cookies do you want?");
@@ -39,18 +43,27 @@ public class StupidController
 		System.out.println("What is pi? has to be a decimal.");
 		double piInput = inputReader.nextDouble();
 		System.out.println(piInput + "? That can't be right.");
+		inputReader.nextLine();
 		
 		System.out.println("Now, what is the square root of pi?");
 		float testInput = inputReader.nextFloat();
 		System.out.println("You said that " + testInput + " is the suare root of pi.");
+		inputReader.nextLine();
 		
 		System.out.println("What is your favorite decimal?");
 		boolean booleanInput = inputReader.nextBoolean();
 		System.out.println("You said" + booleanInput);
+		inputReader.nextLine();
 		
-		System.out.println("");
+		System.out.println("How would you describe yourself in one word");
 		String someInput = inputReader.next();
-		System.out.println("Ok, you typed this: " + someInput);
+		System.out.println("Ok, you described yourself as " + someInput);
+		inputReader.nextLine();
+		
+		System.out.println("What do you like to do in your free time?");
+		String freeInput = inputReader.nextLine();
+		System.out.println("You like to " + freeInput + "in your free time.");
+		
 		
 	}
 }
