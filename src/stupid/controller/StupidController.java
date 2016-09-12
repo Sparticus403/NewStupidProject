@@ -34,6 +34,7 @@ public class StupidController
 		System.out.println("How many cookies do you want?");
 		int cookieInput = inputReader.nextInt();
 		System.out.println("You want " + cookieInput + " cookies.");
+		inputReader.nextLine(); //Used to consume unneeded input.
 		
 		System.out.println("What is pi? has to be a decimal.");
 		double piInput = inputReader.nextDouble();
@@ -43,12 +44,13 @@ public class StupidController
 		float testInput = inputReader.nextFloat();
 		System.out.println("You said that " + testInput + " is the suare root of pi.");
 		
-		System.out.println("");
+		System.out.println("What is your favorite decimal?");
 		boolean booleanInput = inputReader.nextBoolean();
-		System.out.println("" + booleanInput);
+		System.out.println("You said" + booleanInput);
 		
 		System.out.println("");
 		String someInput = inputReader.next();
 		System.out.println("Ok, you typed this: " + someInput);
+		
 	}
 }
