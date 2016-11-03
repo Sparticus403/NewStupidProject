@@ -6,6 +6,9 @@ public class StupidController
 {
 	private String myName;
 	private Scanner inputReader;
+	String sample = "some words are niftier than others";
+	String otherValue = " ";
+	int index = -99;
 
 	public StupidController()
 	{
@@ -17,7 +20,37 @@ public class StupidController
 	{
 		System.out.println("the");
 		System.out.println(myName);
-		askQuestions();
+		//askQuestions();
+		playWithStrings();
+		playWithSubstrings();
+	}
+	
+	private void playWithStrings()
+	{
+		index = sample.toLowerCase().indexOf(otherValue.toLowerCase());
+		
+		System.out.println("The index of otherValue in sample is: " + index);
+		
+		index = sample.indexOf(otherValue);
+		
+		index = otherValue.indexOf(sample);
+		if(index >= 0)
+		{
+			//do something because it exists
+			//like change a boolean
+			//or check further
+			int otherIndex = sample.indexOf("other search", index + 1);
+		}
+		System.out.println("The index of otherValue in sample is: " + index);
+	}
+	
+	private void playWithSubstrings()
+	{
+		String partOne = sample.substring(5);
+		String partTwo = sample.substring(5, sample.length());
+		
+		System.out.println("Here is partOne: " + partOne);
+		System.out.println("Here is partTwo: " + partTwo);
 	}
 	
 	private void askQuestions()
@@ -27,8 +60,8 @@ public class StupidController
 		System.out.println("Oh, you said: " + input + " about your day.");
 		
 		System.out.println("My next question is this: What is the best type of food?");
-		String foodInput = inputReader.next();
-		if(foodInput.equals(""))
+		String foodInput = inputReader.nextLine();
+		if(!foodInput.equals(""))
 		{
 			System.out.println("Ok, you typed this: " + foodInput);
 			
